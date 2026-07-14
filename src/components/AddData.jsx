@@ -20,7 +20,10 @@ const AddData = () => {
   });
 
   const inputHandler = (event) => {
-    changeInput({ ...input, [event.target.name]: event.target.value });
+    changeInput({
+      ...input,
+      [event.target.name]: event.target.value,
+    });
   };
 
   const readValue = () => {
@@ -39,108 +42,110 @@ const AddData = () => {
       <NavBar />
 
       <div className="container mt-4">
-        <div className="row g-3">
+        <h2 className="text-center mb-4">Add Vehicle Booking</h2>
 
-          <div className="col-md-6">
+        <div className="row">
+          <div className="col-md-6 mb-3">
+            <label className="form-label">Booking ID</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Booking ID"
               name="bookingId"
               value={input.bookingId}
               onChange={inputHandler}
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 mb-3">
+            <label className="form-label">Owner Name</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Owner Name"
               name="ownerName"
               value={input.ownerName}
               onChange={inputHandler}
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 mb-3">
+            <label className="form-label">Email</label>
             <input
               type="email"
               className="form-control"
-              placeholder="Email"
               name="email"
               value={input.email}
               onChange={inputHandler}
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 mb-3">
+            <label className="form-label">Phone</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Phone"
               name="phone"
               value={input.phone}
               onChange={inputHandler}
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 mb-3">
+            <label className="form-label">Vehicle Registration Number</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Vehicle Registration Number"
               name="vehicleRegistrationNumber"
               value={input.vehicleRegistrationNumber}
               onChange={inputHandler}
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 mb-3">
+            <label className="form-label">Vehicle Brand</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Vehicle Brand"
               name="vehicleBrand"
               value={input.vehicleBrand}
               onChange={inputHandler}
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 mb-3">
+            <label className="form-label">Vehicle Model</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Vehicle Model"
               name="vehicleModel"
               value={input.vehicleModel}
               onChange={inputHandler}
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 mb-3">
+            <label className="form-label">Battery Capacity (kWh)</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Battery Capacity"
               name="batteryCapacity"
               value={input.batteryCapacity}
               onChange={inputHandler}
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 mb-3">
+            <label className="form-label">Connector Type</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Connector Type"
               name="connectorType"
               value={input.connectorType}
               onChange={inputHandler}
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 mb-3">
+            <label className="form-label">Charging Date</label>
             <input
               type="date"
               className="form-control"
@@ -150,45 +155,44 @@ const AddData = () => {
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 mb-3">
+            <label className="form-label">Time Slot</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Time Slot"
               name="timeSlot"
               value={input.timeSlot}
               onChange={inputHandler}
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 mb-3">
+            <label className="form-label">Estimated Units (kWh)</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Estimated Units"
               name="estimatedUnits"
               value={input.estimatedUnits}
               onChange={inputHandler}
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 mb-3">
+            <label className="form-label">Charging Bay Number</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Charging Bay Number"
               name="chargingBayNumber"
               value={input.chargingBayNumber}
               onChange={inputHandler}
             />
           </div>
 
-          <div className="col-12">
+          <div className="col-12 text-center">
             <button className="btn btn-primary" onClick={readValue}>
               Add Booking
             </button>
           </div>
-
         </div>
       </div>
     </div>
